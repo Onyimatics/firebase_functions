@@ -13,14 +13,14 @@ const app = express();
 app.use(cors());
 
 
-// app.use((request, response, next) => {
-//     request.header("Access-Control-Allow-Origin", "*");
-//     response.header(
-//         "Access-Control-Allow-Headers",
-//         "Origin, X-Requested-With, Content-Type, Accept"
-//     );
-//     next();
-// });
+app.use((request, response, next) => {
+    request.header("Access-Control-Allow-Origin", "*");
+    response.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+});
 
 
 const user_id = (data) => {
